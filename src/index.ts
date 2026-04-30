@@ -88,4 +88,5 @@ app.post('/api/templates/:slug/preview', async (req, res) => {
   res.json(r);
 });
 
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+const PORT = Number(process.env.PORT) || 4000;
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
